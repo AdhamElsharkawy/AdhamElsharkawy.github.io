@@ -1,1 +1,22 @@
-<meta http-equiv="refresh" content="0; URL='http://adhamdev.me/portfolio/'" />
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script type="text/javascript">
+        // Redirect to index.html while preserving the path
+        var path = window.location.pathname;
+        var segments = path.split('/').filter(function(t) { return t !== ""; });
+        // Adjust the path depending on your project's base URL
+        var adjustedPath = segments.slice(1).join('/'); // Remove the first segment if it's the base URL segment
+        var hashPath = adjustedPath ? '#' + adjustedPath : '';
+        window.location.replace(window.location.origin + '/portfolio/' + hashPath + window.location.search);
+    </script>
+</head>
+<body>
+</body>
+</html>
+<script type="text/javascript">
+    // Simply redirect to the base path, letting Vue Router take over
+    window.location.replace(window.location.origin + '/portfolio/' + window.location.pathname);
+</script>
