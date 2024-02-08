@@ -10,7 +10,7 @@
         // Adjust the path depending on your project's base URL
         var adjustedPath = segments.slice(1).join('/'); // Remove the first segment if it's the base URL segment
         var hashPath = adjustedPath ? '#' + adjustedPath : '';
-        window.location.replace(window.location.origin + '/portfolio/' + hashPath + window.location.search);
+        window.location.replace(window.location.origin + '/home/' + hashPath + window.location.search);
     </script>
 </head>
 <body>
@@ -18,5 +18,5 @@
 </html>
 <script type="text/javascript">
     // Simply redirect to the base path, letting Vue Router take over
-    window.location.replace(window.location.origin + '/portfolio/' + window.location.pathname);
+    window.location.replace(window.location.origin + '/home/' + window.location.pathname);
 </script>
