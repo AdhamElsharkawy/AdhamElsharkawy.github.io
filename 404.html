@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecting...</title>
     <script>
-        // Redirect to '/home/' if the current path does not exactly match it
+        // Redirect if the path does not exactly match '/home/'
+        // or it's not just '/home' (without the trailing slash)
+        var currentPath = window.location.pathname;
         var targetPath = '/home/';
-        if (window.location.pathname !== targetPath) {
+        if (currentPath !== targetPath && currentPath !== '/home') {
             window.location.href = targetPath;
         }
     </script>
